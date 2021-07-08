@@ -1,6 +1,6 @@
 package com.silvericedan.spring.basics.springin5steps.services;
 
-public class BubbleSortAlgorithm {
+public class BubbleSortAlgorithm implements SortAlgorithm{
 
     public int[] sort(int[] numbers){
 
