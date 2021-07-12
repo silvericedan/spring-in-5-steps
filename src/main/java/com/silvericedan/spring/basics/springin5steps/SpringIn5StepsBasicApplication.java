@@ -1,14 +1,12 @@
 package com.silvericedan.spring.basics.springin5steps;
 
 import com.silvericedan.spring.basics.springin5steps.services.BinarySearchImpl;
-import com.silvericedan.spring.basics.springin5steps.services.BubbleSortAlgorithm;
-import com.silvericedan.spring.basics.springin5steps.services.QuickSortAlgorithm;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
-public class SpringIn5StepsApplication {
+public class SpringIn5StepsBasicApplication {
 
 	//We need to look for using spring this questions:
 	//What are the beans?
@@ -21,7 +19,7 @@ public class SpringIn5StepsApplication {
 		//BinarySearchImpl binarySearch = new BinarySearchImpl(new QuickSortAlgorithm());
 
 		//Application Context will mantain all the beans
-		ApplicationContext applicationContext = SpringApplication.run(SpringIn5StepsApplication.class, args);
+		ApplicationContext applicationContext = SpringApplication.run(SpringIn5StepsBasicApplication.class, args);
 		BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
 		BinarySearchImpl binarySearch1 = applicationContext.getBean(BinarySearchImpl.class);
 
