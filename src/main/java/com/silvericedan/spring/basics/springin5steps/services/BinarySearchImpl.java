@@ -9,6 +9,11 @@ public class BinarySearchImpl {
     @Autowired
     private SortAlgorithm sortAlgorithm;
 
+    //One way without using primary, of using the implementation that we need is
+    //naming the variable with the same name that the algorithm, it will use that implementation
+    //@Autowired
+    //private SortAlgorithm bubbleSortAlgorithm;
+
     public int binarySearch(int[] numbers, int numberToSearchFor){
 
         int[] sorted = sortAlgorithm.sort(numbers);
