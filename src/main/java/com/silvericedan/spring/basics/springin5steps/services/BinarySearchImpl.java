@@ -2,9 +2,14 @@ package com.silvericedan.spring.basics.springin5steps.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+//For defect, all beans are SINGLETON. With scope you can define them to be
+//Prototype, each new call will instanciate a new object
 @Component
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class BinarySearchImpl {
 
     @Autowired
