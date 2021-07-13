@@ -8,8 +8,6 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
 
 //For defect, all beans are SINGLETON. With scope you can define them to be
 //Prototype, each new call will instanciate a new object
@@ -43,13 +41,13 @@ public class BinarySearchImpl {
         return 3; //just simple return to mock results
     }
 
-    @PostConstruct
+   // @PostConstruct
     public void postConstruct() {
         logger.info("postConstruct");
     }
 
     //For Predestroy be called, the Component should not have prototype on it, try commenting that line and see that it works
-    @PreDestroy
+    //@PreDestroy
     public void preDestroy() {
         logger.info("preDestroy");
     }
