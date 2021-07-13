@@ -7,13 +7,13 @@ import org.springframework.stereotype.Component;
 public class ComponentDAO {
 
     @Autowired
-    JdbcConnection jdbcConnection;
+    ComponentJdbcConnection jdbcConnection;
 
-    public JdbcConnection getJdbcConnection() {
+    public ComponentJdbcConnection getJdbcConnection() {
         return jdbcConnection;
     }
 
-    public void setJdbcConnection(JdbcConnection jdbcConnection) {
+    public void setJdbcConnection(ComponentJdbcConnection jdbcConnection) {
         this.jdbcConnection = jdbcConnection;
     }
 

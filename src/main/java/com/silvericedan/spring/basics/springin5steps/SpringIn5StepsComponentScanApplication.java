@@ -7,8 +7,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan("com.silvericedan.spring.basics.componentscan")
 public class SpringIn5StepsComponentScanApplication {
 
 	//We use this Logger to print in console when the app runs with "INFO ....."

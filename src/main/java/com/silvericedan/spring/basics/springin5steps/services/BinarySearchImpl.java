@@ -1,16 +1,23 @@
 package com.silvericedan.spring.basics.springin5steps.services;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 //For defect, all beans are SINGLETON. With scope you can define them to be
 //Prototype, each new call will instanciate a new object
 @Component
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class BinarySearchImpl {
+
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     @Qualifier("bubble")
@@ -35,4 +42,16 @@ public class BinarySearchImpl {
 
         return 3; //just simple return to mock results
     }
+
+    @PostConstruct
+    public void postConstruct() {
+        logger.info("postConstruct");
+    }
+
+    //For Predestroy be called, the Component should not have prototype on it, try commenting that line and see that it works
+    @PreDestroy
+    public void preDestroy() {
+        logger.info("preDestroy");
+    }
+
 }
