@@ -10,6 +10,7 @@ import org.springframework.context.ApplicationContext;
 @SpringBootApplication
 public class SpringIn5StepsScopeApplication {
 
+	//We use this Logger to print in console when the app runs with "INFO ....."
 	private static Logger LOGGER = LoggerFactory.getLogger(SpringIn5StepsScopeApplication.class);
 
 	public static void main(String[] args) {
