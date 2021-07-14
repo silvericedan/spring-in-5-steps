@@ -9,6 +9,7 @@
     </bean>
 
     <bean id="XmlPersonDAO" class="com.silvericedan.spring.basics.springin5steps.xmlscope.XmlPersonDAO">
+        <property name="xmlJdbcConnection" ref="xmlJdbcConnection"></property>
         <!-- collaborators and configuration for this bean go here -->
     </bean>
 
