@@ -20,16 +20,20 @@ public class SpringIn5StepsBasicApplication {
 		//BinarySearchImpl binarySearch = new BinarySearchImpl(new QuickSortAlgorithm());
 
 		//Application Context will mantain all the beans
-		AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringIn5StepsBasicApplication.class);
 
-		BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
-		BinarySearchImpl binarySearch1 = applicationContext.getBean(BinarySearchImpl.class);
+		//This is an alternative way of using Spring without Boot, using AnnotationConfigApplicationContext
+		//instead of using ApplicationContext from Spring-Boot.
+		//We use "try()" to ensure if something goes wrong, the application closes
+		//Also instead of try, we could use applicationContext.close() at the end.
+		try(AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringIn5StepsBasicApplication.class)){
+			BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
+			BinarySearchImpl binarySearch1 = applicationContext.getBean(BinarySearchImpl.class);
 
-		System.out.println(binarySearch);
-		System.out.println(binarySearch1);
+			System.out.println(binarySearch);
+			System.out.println(binarySearch1);
 
-		int result = binarySearch.binarySearch(new int[] {12,4,6},3);
-		System.out.println(result);
+			int result = binarySearch.binarySearch(new int[] {12,4,6},3);
+			System.out.println(result);
+		}
 	}
-
 }
