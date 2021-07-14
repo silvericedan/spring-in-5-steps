@@ -1,4 +1,4 @@
-package com.silvericedan.spring.basics.springin5steps.services;
+package com.silvericedan.spring.basics.springin5steps.basic;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;

@@ -1,6 +1,6 @@
 package com.silvericedan.spring.basics.springin5steps;
 
-import com.silvericedan.spring.basics.springin5steps.services.BinarySearchImpl;
+import com.silvericedan.spring.basics.springin5steps.basic.BinarySearchImpl;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
