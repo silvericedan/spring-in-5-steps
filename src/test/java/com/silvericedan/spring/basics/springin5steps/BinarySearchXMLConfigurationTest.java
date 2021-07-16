@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 
 //Load the context
 @RunWith(SpringRunner.class)
-@ContextConfiguration(locations="/applicationContext.xml")
+@ContextConfiguration(locations="/testContext.xml")
 public class BinarySearchXMLConfigurationTest {
 
     //Get this bean from the context
