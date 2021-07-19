@@ -4,4 +4,9 @@ import javax.inject.Named;
 
 @Named
 public class SomeCdiDAO {
+
+    //we simulate some data coming from a database
+    public int[] getData() {
+        return new int[]{5, 89, 100};
+    }
 }
